@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        /* ===== Colors (Dark + Secondary) ===== */
+        :root{
+            --dark-bg: #0F0F1A;
+            --card-bg: #1B1F3B;
+            --sec-color: #816797; /* Secondary Color */
+            --text-light: #E6E6FA;
+            --hover-bg: #554994;
+        }
+
+        body{
+            background-color: var(--dark-bg);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+
+        /* ===== Card ===== */
+        .inf{
+            width: 320px;
+            padding: 25px 20px;
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: 0 0 25px #81679733;
+            text-align: center;
+            transform: translateY(10px);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        /* ===== Image ===== */
+        .im{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #i1{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #81679733;
+            transition: 0.4s;
+        }
+        #i1:hover{
+            transform: scale(1.07);
+            box-shadow: 0 0 18px var(--sec-color);
+        }
+
+        /* ===== Text ===== */
+        h2, p{
+            color: var(--text-light);
+            margin: 8px 0;
+        }
+
+        /* ===== Links ===== */
+        a{
+            text-decoration: none;
+            display: block;
+            margin: 12px auto;
+            padding: 12px;
+            width: 80%;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid var(--sec-color);
+        }
+        a:hover{
+            background-color: var(--hover-bg);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #554994aa;
+        }
+
+        /* ===== Animation ===== */
+        @keyframes fadeInUp{
+            0%{ opacity:0; transform:translateY(20px); }
+            100%{ opacity:1; transform:translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="inf">
+        <div class="im">
+            <img id="i1" src="os.jpg">
+        </div>
+
+        <h2>Osama Othman</h2>
+        <p>Amman, Jordan</p>
+        <p>Front-End Developer</p>
+
+        <a href="https://wa.me/962791438226">Whatsapp</a>
+        <a href="https://www.facebook.com/share/1BPYaZhmaH/">Facebook</a>
+        <a href="https://www.linkedin.com/in/osama-hojoj-?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+        <a href="https://www.instagram.com/osamaalhojoj?igsh=bzJ2MThhZ3hlOW8w">Instagram</a>
+    </div>
+</body>
+</html>
